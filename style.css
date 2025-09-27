@@ -7,14 +7,6 @@ html{
 
 }
 
-/*BODY*/
-body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
-    padding-top: 60px;
-}
-
 /*NAVBAR*/
 .nav-bar{
     overflow: hidden;
@@ -22,7 +14,7 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     border-bottom: 2px solid #ddd;
     font: bold 18px Arial, Helvetica, sans-serif;
 
@@ -56,11 +48,31 @@ header {
 
 /*This styles the image in the header*/
 header .header-img{
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     border: 3px solid black;
 }
+
+/* Container that holds image and video */
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* spacing between them */
+  margin-top: 20px;
+}
+
+
+/* Video styled same size as image */
+.header-video {
+  width: 50%;
+  height: 50%;
+  border-radius: 8px;   /* optional: rounded corners */
+  object-fit: cover;    /* crop to fit */
+  float: right;
+}
+
 
 /*ABOUT*/
 p{
@@ -98,12 +110,14 @@ h3{
 
 }     
 body{
-    background-image: url("./images/IT_background.png");
+    background-image: url("IT_background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
+
+
 
 section {
   scroll-margin-top: 100px; /* match your navbar height */
@@ -201,4 +215,105 @@ header {
 
 .header-content h1, .header-content img {
   z-index: 1; /* Ensure content is above video */
+}
+
+
+/* About section media container */
+#about .media-container {
+  display: flex;
+  flex-wrap: wrap;         /* allow stacking on small screens */
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Paragraph takes flexible space */
+#about p {
+  flex: 1  00px;         /* grow/shrink with a minimum width */
+}
+
+/* About image scales with screen */
+#about img {
+  max-width: 500px;        /* caps size on big screens */
+  width: 100%;             /* scales down on smaller screens */
+  height: auto;            /* keeps aspect ratio */
+  border-radius: 8px;      /* optional styling */
+}
+
+.cert-content {
+  display: flex;
+  flex-direction: row;       /* side by side */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  background: whitesmoke;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Image floats right because it’s placed after the text in HTML */
+.cert-img {
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Text block stays left */
+.cert-text {
+  flex: 1;  /* takes up remaining space */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .cert-content {
+    flex-direction: column;   /* stack image below text */
+    align-items: center;
+    text-align: center;
+  }
+
+  .cert-img {
+    max-width: 100%;
+  }
+}
+
+
+h5{
+    margin: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+
+.resume-content {
+  display: flex;              /* side-by-side layout */
+  align-items: flex-start;    /* align top edges */
+  gap: 20px;                  /* spacing between image and text */
+  background: whitesmoke;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Image styling */
+.resume-img {
+  max-width: 220px;   /* keeps image smaller than text */
+  height: center;
+  border-radius: 8px;
+}
+
+/* Text block styling */
+.resume-text {
+  flex: 1;  /* take remaining space */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
 }
