@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <!--HEADER-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BASIC PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+   <!--BODY-->
+
+  <body>
+
+    
+    <!--NAVBAR-->
+    <div class="nav-bar">
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <!-- THIS ALLOWS FOR A DROP DOWN MENU IF I WANT IT 
+            <li class="drop"> -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact Form</a></li>
+        </ul>
+    </div>
+    
+    <!--HEADER-->
+    <header id="home">
+      <h1>BASIC PORTFOLIO</h1>
+      <img src="./images/inspector_gadget.webp" alt="Profile picture here" class="header-img"/>
+    <h1>Mr. IT</h1>
+    </header>
+    
+    
+    
+    <section id="about" class="container">
+        <!--ABOUT-->
+        <div>
+        <h2>About</h2>
+            <p>
+            As a long-time computer and gaming enthusiast with a penchant for tinkering 
+            leading to a passion about leveraging technology to enhance productivity, 
+            streamline workflows, and improve quality of life through practical, real-world
+             applications.
+           <br>
+           <br>
+            A motivated IT Engineer with a strong foundation in web development 
+            technologies, including HTML, CSS & Bootstrap. With a past projects in SQL,
+             JavaScript & Node.js. 
+           <br>
+           <br>
+           Building on a background in Network Engineering, Access Control, 
+           Security Surveillance installation & administration, combining hands-on 
+           infrastructure knowledge with modern software development skills and history with
+           apprenticeships of those interested in these respective fields.            
+            </p>
+        </div>
+    </section>
+
+
+        <!--RESUME-->
+        <section id="resume" class="container">
+        <div>
+            <h2>Resume</h2>
+                <p>
+                The Tech Academy - Full Stack Web Development Bootcamp
+                <br />
+                <br>
+                Graduated: March 2024
+                <br />
+                <br>
+                Skills Learned: HTML, CSS, JavaScript, jQuery, Bootstrap, Git, GitHub, JSON, APIs, AJAX, Node.js, Express.js, SQL, Sequelize, NoSQL
+                <br />
+                <br>
+                Projects: Portfolio, Simple-recipes, 2025 NBA Championship Webpage, Note Taker, Employee Management
+                <br />
+                <br>
+                I look forward to helping bring your imagination to life!
+                </p>
+        </div>
+        </section>
+
+        <!--CERTIFICATIONS-->
+<section class="container" id="certifications">
+    <div>
+        <h2>Certifications</h2>
+            <p>
+                The Tech Academy 
+                <br>
+                <br>
+                G4s AMAG Technologies
+                <br>
+                <br>
+                VIVOTEK Inc.
+                <br><br>
+                Hytera Radio
+                <br> 
+                <br>
+                CompTIA A+ (in progress)
+            </p>
+    </div>
+</section>
+
+     <!-- CONTACT FORM -->
+<section class="container" id="contact">
+  <div class="form-wrapper">
+    <h2>Contact Form</h2>
+    <h3>
+      If you are interested in working with me, please reach out!<br>
+      Contact below!
+    </h3>
+
+    <form action="https://formspree.io/f/xwprpann" method="POST">
+      <div class="form-field">
+        <label for="email">Your email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Your message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+    <!--FOOTER-->
+<footer>
+  <h4>Author: Inspector Gadget</h4>
+  </footer>
+  </body>
+</html>
